@@ -16,7 +16,7 @@ body {
 }
 
 [class*="__container"]{
-    padding-inline: clamp(15px, 3vw, 100px);;
+    padding-inline: clamp(15px, 3vw, 100px);
 }
 
 /* Компоненти */
@@ -118,13 +118,13 @@ body {
     color: #fff;
 }
 
-@media (width <= 380px) {
+@media (width <= 400px) {
     .header__button {
         align-self: stretch;
     }
 }
 
-.munu {
+.menu {
 
 }
 
@@ -135,15 +135,15 @@ body {
     gap: clamp(15px, 1vw, 80px);
 }
 
-.manu__item {
+.menu__item {
 
 }
 
-.manu__link {
+.menu__link {
     font-size: clamp(16px, 1vw, 32px);
 }
 
-.manu__link:hover {
+.menu__link:hover {
     text-decoration: underline;
 }
 
@@ -166,6 +166,7 @@ body {
 .hero__content {
     flex-grow: 1;
     flex-basis: 100px;
+    padding-block: clamp(20px, 7.5vw, 40px);
     
 }
 
@@ -204,6 +205,7 @@ body {
 .hero__picture {
     flex-grow: 1;
     flex-basis: 100px;
+    align-self: flex-end;
 }
 
 .hero__image {
@@ -221,6 +223,19 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+    }
+    .hero__content {
+        text-align: center;
+    }
+    .hero__buttons {
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@media (width <= 400px) {
+    .hero__button {
+        align-items: stretch;
     }
 }
 
