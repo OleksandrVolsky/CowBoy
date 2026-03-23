@@ -19,12 +19,42 @@ body {
     padding-inline: clamp(15px, 3vw, 100px);;
 }
 
+/* Компоненти */
+.button {
+    background-color: #fff;
+    transition: 
+        background-color 0.3s, 
+        color 0.3s;
+    text-align: center;
+    border-radius: 260px;
+    padding-inline: clamp(30px, 3vw, 45px);
+    padding-block: clamp(10px, 2vw, 35px);
+    font-size: clamp(16px, 1vw, 32px);
+}
+
+.button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+.button--dark {
+    background-color: #000;
+    color: #fff;
+}
+
+.button--dark:hover {
+    background-color: #fff;
+    color: #000;
+}
+
+/* --------------- */
 
 .header {
-    position: fixed;
+    position: absolute;
     width: 100%;
     top: 0;
     left: 0;
+    z-index: 10;
     background-color: #E6DAC0;
     padding-block: clamp(10px, 2vw, 42px);
 }
@@ -32,6 +62,15 @@ body {
 .header__container {
     display: flex;
     align-items: center;
+}
+
+@media (width <= 630px) {
+    .header__container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 15px;
+}
 }
 
 .header__logo {
@@ -63,11 +102,26 @@ body {
 }
 
 .header__button {
+    transition: 
+        background-color 0.3s, 
+        color 0.3s;
     border: 1px solid #000;
+    text-align: center;
     border-radius: 260px;
-    padding-inline: clamp(30px, 3vw, 83px);
+    padding-inline: clamp(30px, 1.5vw, 83px);
     padding-block: clamp(10px, 2vw, 19px);
     font-size: clamp(16px, 1vw, 32px);
+}
+
+.header__button:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+@media (width <= 380px) {
+    .header__button {
+        align-self: stretch;
+    }
 }
 
 .munu {
@@ -89,5 +143,85 @@ body {
     font-size: clamp(16px, 1vw, 32px);
 }
 
+.manu__link:hover {
+    text-decoration: underline;
+}
 
+/* ---------- */
 
+.hero {
+    min-height:  100svh;
+    background-color: #E6DAC0;
+    padding-top: clamp(100px, 7.5vw, 200px);
+    display: flex;
+    align-items: flex-end;
+}
+
+.hero__container {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.hero__content {
+    flex-grow: 1;
+    flex-basis: 100px;
+    
+}
+
+.hero__title {
+    font-weight: 600;
+    font-size: clamp(30px,5vw ,128px);
+}
+
+.hero__title:not(:last-child) {
+    margin-bottom: 0.1875em;
+}
+
+.hero__text {
+    line-height: 1.5;
+    font-size: clamp(16px, 1vw, 40px);
+}
+
+.hero__text p:not(:last-child) {
+    margin-bottom: 0.5em;
+}
+
+.hero__text:not(:last-child) {
+    margin-bottom: 1.6em;
+}
+
+.hero__buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp(10px, 1vw, 28px);
+}
+
+.hero__button {
+    display: inline-block;
+}
+
+.hero__picture {
+    flex-grow: 1;
+    flex-basis: 100px;
+}
+
+.hero__image {
+
+}
+
+@media (width <= 630px) {
+    .hero {
+        padding-top: 160px;
+    }
+}
+
+@media (width <= 992px) {
+    .hero__container {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+}
+
+/* ---------- */
