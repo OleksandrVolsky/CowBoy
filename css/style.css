@@ -1,3 +1,9 @@
+html {
+    /* анімаційний перехід без JS */
+    scroll-behavior: smooth; 
+}
+
+
 body {
     font-family: "Inter", sans-serif;
     font-size: 36px;
@@ -378,4 +384,51 @@ body {
     .download__image {
         max-width: 46%;
     }
+}
+
+/* ------- */
+
+.video {
+    height: 100svh;
+}
+
+.video__item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* -------- */
+
+.footer {
+
+}
+.footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+.footer__logo {
+    width: clamp(100px, 10vw, 260px);
+}
+
+.footer__button {
+    transition: 
+        background-color 0.3s, 
+        color 0.3s;
+    border: 1px solid #000;
+    text-align: center;
+    border-radius: 260px;
+    aspect-ratio: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: clamp(60px, 3vw, 85px);
+    font-size: clamp(16px, 1vw, 32px);
+}
+
+.footer__button:hover {
+    background-color: #000;
+    color: #fff;
 }
