@@ -53,6 +53,7 @@ body {
 
 .header {
     position: fixed;
+    background-color: #E6DAC0;
     width: 100%;
     top: 0;
     left: 0;
@@ -234,9 +235,13 @@ body {
 }
 
 @media (width <= 400px) {
-    .hero__button {
+    .hero__buttons {
         flex-direction: column;
         align-items: stretch;
+        width: 100%;
+    }
+    .hero__button {
+        width: 100%;
     }
 }
 
@@ -312,17 +317,45 @@ body {
 
 .download {
 }
-.download__comtainer {
+.download__container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    justify-content: center;
+    align-items: center;
 }
+
+.download__content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: clamp(50px, 5vw, 300px);
+    padding-bottom: clamp(30px, 5vw, 170px);
+}
+
 .download__title {
+    
 }
 .download__text {
+    text-align: center;
+    max-width: 45ch;
 }
 .download__button {
+    margin-top: clamp(10px, 1.5vw, 24px);
 }
 .button {
 }
 .button--dark {
 }
 .download__image {
+    max-width: 46%;
+}
+
+@media (max-width >= 768px) {
+    .download__image {
+        max-width: 46%;
+    }
 }
