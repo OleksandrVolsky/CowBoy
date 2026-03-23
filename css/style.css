@@ -337,19 +337,39 @@ body {
 }
 
 .download__title {
-    
+    text-wrap: balance;
+    font-weight: 600;
+    font-size: clamp(40px, 5vw, 96px);
 }
+
+.download__title:not(:last-child) {
+    margin-bottom: 0.25em;
+}
+
 .download__text {
-    text-align: center;
-    max-width: 45ch;
+    line-height:  1.5;
+    font-size: clamp(16px, 1vw, 36px);
 }
+
+.download__text p:not(:last-child) {
+    margin-bottom: 0.25em;
+}
+
+.download__text:not(:last-child) {
+    margin-bottom: 1.7em;
+}
+
 .download__button {
-    margin-top: clamp(10px, 1.5vw, 24px);
+
 }
 .button {
+
 }
+
 .button--dark {
+
 }
+
 .download__image {
     max-width: 46%;
 }
